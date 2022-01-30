@@ -5,7 +5,7 @@ import { CNavGroup, CNavItem } from "@coreui/react";
 
 export const buttonNav = {
   component: CNavGroup,
-  name: "Buttons",
+  name: "Patients",
   to: "/buttons",
   icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
   items: [

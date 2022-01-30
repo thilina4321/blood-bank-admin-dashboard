@@ -6,7 +6,7 @@ import { iconRoutes } from "./routes/icons";
 import { notificationRoutes } from "./routes/notification";
 import { widgetRoutes } from "./routes/widgets";
 import { themeRoutes } from "./routes/theme";
-
+import {homeRoutes} from './routes/home'
 const routes = [
   ...themeRoutes,
   ...baseRoutes,
@@ -16,6 +16,7 @@ const routes = [
   ...iconRoutes,
   ...notificationRoutes,
   ...widgetRoutes,
+  ...homeRoutes
 ];
 
 export default routes;

@@ -168,46 +168,7 @@ const Carousels = () => {
           </CCardBody>
         </CCard>
       </CCol>
-      <CCol xs={12}>
-        <CCard className="mb-4">
-          <CCardHeader>
-            <strong>Carousel</strong> <small>Dark variant</small>
-          </CCardHeader>
-          <CCardBody>
-            <p className="text-medium-emphasis small">
-              Add <code>dark</code> property to the <code>CCarousel</code> for darker controls,
-              indicators, and captions. Controls have been inverted from their default white fill
-              with the <code>filter</code> CSS property. Captions and controls have additional Sass
-              variables that customize the <code>color</code> and <code>background-color</code>.
-            </p>
-            <DocsExample href="components/carousel/#dark-variant">
-              <CCarousel controls indicators dark>
-                <CCarouselItem>
-                  <img className="d-block w-100" src={slidesLight[0]} alt="slide 1" />
-                  <CCarouselCaption className="d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                  </CCarouselCaption>
-                </CCarouselItem>
-                <CCarouselItem>
-                  <img className="d-block w-100" src={slidesLight[1]} alt="slide 2" />
-                  <CCarouselCaption className="d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                  </CCarouselCaption>
-                </CCarouselItem>
-                <CCarouselItem>
-                  <img className="d-block w-100" src={slidesLight[2]} alt="slide 3" />
-                  <CCarouselCaption className="d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                  </CCarouselCaption>
-                </CCarouselItem>
-              </CCarousel>
-            </DocsExample>
-          </CCardBody>
-        </CCard>
-      </CCol>
+     
     </CRow>
   )
 }

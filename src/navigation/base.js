@@ -5,7 +5,7 @@ import { CNavGroup, CNavItem } from "@coreui/react";
 
 export const baseNav = {
   component: CNavGroup,
-  name: "Base",
+  name: "Blood",
   to: "/base",
   icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
   items: [

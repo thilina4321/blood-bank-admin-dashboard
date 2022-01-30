@@ -3,12 +3,11 @@ import { CNav, CNavItem, CNavLink, CTabContent, CTabPane } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilCode, cilMediaPlay } from '@coreui/icons'
 
-import packageJson from '../../package.json'
 
 const DocsExample = (props) => {
   const { children, href } = props
 
-  const _href = `https://coreui.io/react/docs/${packageJson.config.coreui_library_short_version}/${href}`
+  const _href = ``;
 
   return (
     <div className="example">

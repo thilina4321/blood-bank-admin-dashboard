@@ -7,7 +7,7 @@ import { CNavGroup, CNavItem } from "@coreui/react";
 
 export const notificationNav = {
     component: CNavGroup,
-    name: "Notifications",
+    name: "Donators",
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {

@@ -5,7 +5,7 @@ import { CNavGroup, CNavItem } from "@coreui/react";
 
 export const formNav = {
   component: CNavGroup,
-  name: "Forms",
+  name: "Researchs",
   icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   items: [
     {

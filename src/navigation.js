@@ -7,7 +7,7 @@ import { formNav } from "./navigation/forms";
 import { iconNav } from "./navigation/icons";
 import { notificationNav } from "./navigation/notifications";
 import { widgetNav } from "./navigation/widgets";
-
+import { homepageNav } from "./navigation/home";
 import { cilSpeedometer } from "@coreui/icons";
 
 import { CNavItem, CNavTitle } from "@coreui/react";
@@ -15,18 +15,19 @@ import { CNavItem, CNavTitle } from "@coreui/react";
 const navigation = [
   {
     component: CNavItem,
-    name: "Dashboard",
+    name: "SL National Blood Bank",
     to: "/dashboard",
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: "info",
-      text: "NEW",
-    },
+    // badge: {
+    //   color: "info",
+    //   text: "NEW",
+    // },
   },
   {
     component: CNavTitle,
     name: "Components",
   },
+  homepageNav,
   baseNav,
   buttonNav,
   chartNav,
