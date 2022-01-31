@@ -1,7 +1,7 @@
 import React, { useEffect, useState, createRef } from 'react'
 import { CRow, CCol, CCard, CCardHeader, CCardBody } from '@coreui/react'
 import { rgbToHex } from '@coreui/utils'
-import { DocsLink } from 'src/components'
+import { DocsLink } from '../../../components'
 
 const ThemeView = () => {
   const [color, setColor] = useState('rgb(255, 255, 255)')

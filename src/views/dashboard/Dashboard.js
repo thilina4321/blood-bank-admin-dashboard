@@ -1,5 +1,5 @@
 import React, { Fragment, lazy } from "react";
-import CorouselDarkVarient from "src/components/corousel/DarkVarient";
+import CorouselDarkVarient from "../../components/corousel/DarkVarient";
 
 import bloodImg from "../../assets/images/blood.jpg";
 import aboutImg from "../../assets/images/about.jpg";

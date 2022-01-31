@@ -1,10 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import { CButton } from "@coreui/react";
 import CardComponent from "../../../components/Card";
 import { OutsideWrapper, InsideWrapper } from "../../../components/Wrapper";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useSelector, useDispatch } from "react-redux";
 import { homeFaqActions } from "../../../store/home/faq";
+
+import { useHistory } from "react-router-dom";
 
 const Faqs = () => {
   const dispatch = useDispatch();
@@ -35,8 +36,11 @@ const Faqs = () => {
       <OutsideWrapper>
         {faqs.map((faq) => (
           <InsideWrapper key={faq.id}>
-            <div onClick={() => createOrUpdateFaq(faq.id)}>
-              <Faq id={faq.id} question={faq.question} answer={faq.answer} />
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => createOrUpdateFaq(faq.id)}
+            >
+              <CardComponent question={faq.question} answer={faq.answer} />
             </div>
           </InsideWrapper>
         ))}
@@ -46,12 +50,3 @@ const Faqs = () => {
 };
 
 export default Faqs;
-
-export const Faq = (props) => {
-  const { id, question, answer } = props;
-  return (
-    <div style={{ cursor: "pointer" }}>
-      <CardComponent question={question} answer={answer} />
-    </div>
-  );
-};

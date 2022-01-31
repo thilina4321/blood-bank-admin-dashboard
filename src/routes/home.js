@@ -1,6 +1,7 @@
 import React from "react";
 
 const Faq = React.lazy(() => import("../views/home/faq/Faq"));
+
 const SpecificFaq = React.lazy(() => import("../views/home/faq/SpecificFaq"));
 
 export const homeRoutes = [

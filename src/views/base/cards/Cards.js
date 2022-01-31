@@ -19,9 +19,9 @@ import {
   CCol,
   CRow,
 } from '@coreui/react'
-import { DocsCallout, DocsExample } from 'src/components'
+import { DocsCallout, DocsExample } from '../../../components'
 
-import ReactImg from 'src/assets/images/react.jpg'
+import ReactImg from '../../../assets/images/react.jpg'
 
 const Cards = () => {
   return (

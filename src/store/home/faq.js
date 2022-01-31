@@ -11,7 +11,15 @@ const homeFaqSlice = createSlice({
     addFaqs(state, action) {
       state.faqs = action.payload;
     },
-    deleteFaq(state, action) {
+    updateValue(state, action) {
+      const data = action.payload;
+
+      const findValue = state.faqs.findIndex((f) => f.id == data.id);
+      if (findValue != -1) {
+        state.faqs[findValue] = data;
+      }
+    },
+    deleteValue(state, action) {
       const remaininFaqs = state.faqs.filter((faq) => faq.id != action.payload);
       state.faqs = remaininFaqs;
     },
