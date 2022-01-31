@@ -2,22 +2,37 @@ import React from "react";
 import { CButton } from "@coreui/react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import useHttp from "../hooks/useHttp";
 
-const ButtonGroupComponent = (props) => {
+const ButtonUpdateGroupComponent = (props) => {
+  const { action, backRoute, id, data, url } = props;
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const { action, backRoute, id, data } = props;
+  const { doRequest: doUpdateRequest } = useHttp({
+    url,
+    method: "put",
+    body: data,
+  });
 
-  const updateHandler = () => {
-    
+  const { doRequest: doDeleteRequest } = useHttp({
+    url: `${url}/${id}`,
+    method: "delete",
+    body: null,
+  });
+
+  const updateHandler = async () => {
+    await doUpdateRequest();
     dispatch(action.updateValue({ id, ...data }));
     history.replace(backRoute);
   };
-  const deleteHandler = () => {
+
+  const deleteHandler = async () => {
+    await doDeleteRequest();
     dispatch(action.deleteValue(id));
     history.replace(backRoute);
   };
+
   const cancelHandler = () => {
     history.replace(backRoute);
   };
@@ -53,4 +68,4 @@ const ButtonGroupComponent = (props) => {
   );
 };
 
-export default ButtonGroupComponent;
+export default ButtonUpdateGroupComponent;

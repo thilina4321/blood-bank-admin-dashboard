@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { homeFaqActions } from "../../../store/home/faq";
 import InputComponent from "../../../components/InputComponent";
-import ButtonGroupComponent from "../../../components/ButtonGroupComponent";
+import ButtonUpdateGroupComponent from "../../../components/ButtonGroupComponent";
 import { useSelector } from "react-redux";
 
 const SpecificFaq = () => {
@@ -30,7 +30,7 @@ const SpecificFaq = () => {
       <InputComponent value={answer} setValue={setAnswer} name="Answer" />
 
       <div>
-        <ButtonGroupComponent
+        <ButtonUpdateGroupComponent
           action={homeFaqActions}
           backRoute="/home-page/faq"
           id={id}
