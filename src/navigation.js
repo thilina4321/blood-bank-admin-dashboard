@@ -1,11 +1,5 @@
 import React from "react";
 import CIcon from "@coreui/icons-react";
-import { baseNav } from "./navigation/base";
-import { buttonNav } from "./navigation/buttons";
-import { chartNav } from "./navigation/charts";
-import { formNav } from "./navigation/forms";
-import { iconNav } from "./navigation/icons";
-import { notificationNav } from "./navigation/notifications";
 import { widgetNav } from "./navigation/widgets";
 import { homepageNav } from "./navigation/home";
 import { cilSpeedometer } from "@coreui/icons";
@@ -28,12 +22,6 @@ const navigation = [
     name: "Components",
   },
   homepageNav,
-  baseNav,
-  buttonNav,
-  chartNav,
-  formNav,
-  iconNav,
-  notificationNav,
   widgetNav,
 ];
 

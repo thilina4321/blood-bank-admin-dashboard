@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CCard, CCardBody, CCardText, CCardTitle, CCol } from "@coreui/react";
+import { CCard, CCardBody, CCardText, CCardTitle } from "@coreui/react";
 
 const CardComponent = (props) => {
   const { question, answer } = props;

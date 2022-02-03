@@ -5,30 +5,30 @@ import { useHistory } from "react-router-dom";
 import useHttp from "../hooks/useHttp";
 
 const ButtonUpdateGroupComponent = (props) => {
-  const { action, backRoute, id, data, url } = props;
+  const { action, backRoute, id, data, updateUrl, deleteUrl } = props;
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const { doRequest: doUpdateRequest } = useHttp({
-    url,
+  const updateRequest = useHttp({
+    url: `${updateUrl}/${id}`,
     method: "put",
     body: data,
   });
 
-  const { doRequest: doDeleteRequest } = useHttp({
-    url: `${url}/${id}`,
+  const deleteRequest = useHttp({
+    url: `${deleteUrl}/${id}`,
     method: "delete",
     body: null,
   });
 
   const updateHandler = async () => {
-    await doUpdateRequest();
+    await updateRequest();
     dispatch(action.updateValue({ id, ...data }));
     history.replace(backRoute);
   };
 
   const deleteHandler = async () => {
-    await doDeleteRequest();
+    await deleteRequest();
     dispatch(action.deleteValue(id));
     history.replace(backRoute);
   };

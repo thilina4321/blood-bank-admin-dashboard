@@ -1,5 +1,3 @@
-// If you want to override variables do it here
-@import "variables";
 
 $enable-ltr: true;
 $enable-rtl: true;
@@ -13,5 +11,3 @@ $enable-rtl: true;
 @import "layout";
 @import "example";
 
-// If you want to add custom CSS you can put it here.
-@import "custom";

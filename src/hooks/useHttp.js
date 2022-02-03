@@ -1,30 +1,25 @@
 import axios from "axios";
-import { useState } from "react";
 
-const useHttp = ({ url, method, body }) => {
-  const [errors, setErrors] = useState(null);
-
+const useHttp = ({ url, method, body, onSucsses }) => {
   const doRequest = async () => {
     try {
-      setErrors(null);
-      const response = await axios[method](url, body);
+      global.setIsLoading(true);
+      const response = await axios[method]("http://localhost:8000" + url, body);
+      global.setIsLoading(false);
 
-      return response.data;
+      onSucsses(response.data);
+      return;
     } catch (err) {
-      setErrors(
-        <div className="alert alert-danger">
-          <h4>Ooops....</h4>
-          <ul className="my-0">
-            {err.response.data.errors.map((err) => (
-              <li key={err.message}>{err.message}</li>
-            ))}
-          </ul>
-        </div>
-      );
+      global.setIsLoading(false);
+
+      // global.showAlert(err.response.data.errors);
+      global.showAlert([]);
+
+      return { error: true };
     }
   };
 
-  return { doRequest };
+  return doRequest;
 };
 
 export default useHttp;

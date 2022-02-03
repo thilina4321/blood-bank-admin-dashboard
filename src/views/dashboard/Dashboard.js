@@ -1,5 +1,5 @@
-import React, { Fragment, lazy } from "react";
-import CorouselDarkVarient from "../../components/corousel/DarkVarient";
+import React, { Fragment } from "react";
+import CorouselDarkVarient from "../../components/DarkVarient";
 
 import bloodImg from "../../assets/images/blood.jpg";
 import aboutImg from "../../assets/images/about.jpg";
@@ -29,6 +29,7 @@ const coursels = [
 const Dashboard = () => {
   return (
     <Fragment>
+      Game ch
       <CorouselDarkVarient items={coursels} />
     </Fragment>
   );

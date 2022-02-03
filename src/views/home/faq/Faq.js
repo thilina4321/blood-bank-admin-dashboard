@@ -6,25 +6,31 @@ import { useSelector, useDispatch } from "react-redux";
 import { homeFaqActions } from "../../../store/home/faq";
 
 import { useHistory } from "react-router-dom";
+import useHttp from "../../../hooks/useHttp";
 
 const Faqs = () => {
   const dispatch = useDispatch();
   const { mountNumber, faqs } = useSelector((state) => state.homeFaq);
   const history = useHistory();
+  const getRequest = useHttp({
+    url: "/home/get-faqs",
+    method: "get",
+    data: null,
+    onSucsses: (data) => dispatch(homeFaqActions.addFaqs(data)),
+  });
 
   useEffect(() => {
-    if (mountNumber === 0) {
-      dispatch(
-        homeFaqActions.addFaqs([
-          { id: 1, question: "q 1", answer: "answer 1" },
-          { id: 2, question: "q 2", answer: "answer 2" },
-          { id: 3, question: "q 3", answer: "answer 3" },
-          { id: 4, question: "q 4", answer: "answer 4" },
-        ])
-      );
-    }
-    dispatch(homeFaqActions.setMountNumber(1));
-  }, []);
+    const httpReq = async () => {
+      if (mountNumber === 0) {
+        await getRequest();
+      }
+      dispatch(homeFaqActions.setMountNumber(1));
+    };
+
+    httpReq();
+  }, [dispatch, getRequest, mountNumber]);
+
+  console.log("data");
 
   const createOrUpdateFaq = (id) => {
     history.push(id ? `/home-page/faq/${id}` : "/home-page/faq/new-faq");

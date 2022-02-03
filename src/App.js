@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 
 const loading = (
@@ -8,18 +8,18 @@ const loading = (
   </div>
 );
 
-// Containers
+// Containers 
 const DefaultLayout = React.lazy(() => import("./layout/DefaultLayout"));
 
 // Pages
-const Login = React.lazy(() => import("./views/pages/login/Login"));
-const Register = React.lazy(() => import("./views/pages/register/Register"));
-const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
-const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
+const Login = React.lazy(() => import("./pages/Login"));
+const Register = React.lazy(() => import("./pages/Register"));
+const Page404 = React.lazy(() => import("./pages/Page404"));
+const Page500 = React.lazy(() => import("./pages/Page500"));
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <React.Suspense fallback={loading}>
         <Switch>
           <Route
@@ -53,7 +53,7 @@ const App = () => {
           />
         </Switch>
       </React.Suspense>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
