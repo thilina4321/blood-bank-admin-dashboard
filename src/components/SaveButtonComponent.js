@@ -3,7 +3,7 @@ import { CButton } from "@coreui/react";
 
 const ButtonGroupComponent = () => {
   return (
-    <div>
+    <div style={{ textAlign: "end" }}>
       <CButton> Save </CButton>
     </div>
   );

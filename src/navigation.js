@@ -2,6 +2,7 @@ import React from "react";
 import CIcon from "@coreui/icons-react";
 import { widgetNav } from "./navigation/widgets";
 import { homepageNav } from "./navigation/home";
+import { patientpageNav } from "./navigation/patients";
 import { cilSpeedometer } from "@coreui/icons";
 
 import { CNavItem, CNavTitle } from "@coreui/react";
@@ -23,6 +24,7 @@ const navigation = [
   },
   homepageNav,
   widgetNav,
+  patientpageNav,
 ];
 
 export default navigation;

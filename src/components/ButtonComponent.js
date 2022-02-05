@@ -11,6 +11,8 @@ const ButtonComponent = (props) => {
           color: "white",
           height: "40px",
           cursor: "pointer",
+          borderRadius: "20px",
+          
         }}
         onClick={clickHandler}
       >
