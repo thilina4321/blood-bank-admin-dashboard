@@ -11,8 +11,13 @@ export const patientpageNav = {
   items: [
     {
       component: CNavItem,
-      name: "Patients",
+      name: "Overview",
       to: "/patients/overview",
+    },
+    {
+      component: CNavItem,
+      name: "Transfusion",
+      to: "/patients/transfusion",
     },
   ],
 };

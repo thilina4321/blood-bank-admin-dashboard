@@ -17,7 +17,12 @@ const InputComponent = (props) => {
       {input ? (
         <input
           type={type}
-          style={{ width: "100%", height: "30px", paddingLeft: "10px" }}
+          style={{
+            width: "100%",
+            height: "30px",
+            paddingLeft: "10px",
+            borderRadius: "5px",
+          }}
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -27,7 +32,6 @@ const InputComponent = (props) => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           rows="10"
-        
         />
       )}
     </div>
