@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 import useHttp from "../../hooks/useHttp";
 import InputComponent from "../../components/InputComponent";
 import SaveButtonComponent from "../../components/SaveButtonComponent";
+import CodeEditor from "../../components/CodeEditor";
 
 const PatientOverview = () => {
   const [title, setTitle] = useState();
@@ -42,14 +43,17 @@ const PatientOverview = () => {
   return (
     <div>
       <InputComponent value={title} setValue={setTitle} name="Title" />
-      <InputComponent
-        input={false}
+      <CodeEditor
         value={description}
         setValue={setDesciption}
-        name="Description"
+        label="Description"
       />
 
-      <SaveButtonComponent data={title, description}  name="Save" clickHanlder={() => {}} />
+      <SaveButtonComponent
+        data={(title, description)}
+        name="Save"
+        clickHanlder={() => {}}
+      />
     </div>
   );
 };

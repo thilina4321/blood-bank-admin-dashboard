@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const ImageUpload = (props) => {
-  const { url, setFile } = props;
+  const { url, setFile, setModelUrl } = props;
 
   const imageRef = useRef();
   const [imageFile, setImageFile] = useState();
@@ -10,7 +10,10 @@ const ImageUpload = (props) => {
   useEffect(() => {
     if (imageFile) {
       const fileReader = new FileReader();
-      fileReader.onload = () => setImageUrl(fileReader.result);
+      fileReader.onload = () => {
+        setImageUrl(fileReader.result);
+        setModelUrl(fileReader.result);
+      };
       fileReader.readAsDataURL(imageFile);
     }
   }, [imageFile]);

@@ -10,7 +10,6 @@ const InputComponent = (props) => {
     input = true,
   } = props;
 
-  console.log(input);
   return (
     <div style={{ width: "100%", marginTop: "1rem", color: color }}>
       <label style={{ margin: "10px 0" }}> {name} </label>
