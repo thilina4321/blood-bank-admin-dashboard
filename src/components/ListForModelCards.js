@@ -17,15 +17,6 @@ const ListForModelCards = (props) => {
       {lists.map((list, index) => (
         <p
           onClick={() => OnSelecttListItem(list.id)}
-          // style={{
-          //   width: "100px",
-          //   height: "50px",
-          //   boxShadow: "2px 2px 8px rgba(0,0,0,0.2)",
-          //   cursor: "pointer",
-          //   backgroundColor: "#eaedef",
-          //   textAlign:'center',
-          //   overflow:'hidden'
-          // }}
           className="list-for-model"
           key={index}
         >
