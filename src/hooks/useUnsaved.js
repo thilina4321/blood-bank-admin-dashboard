@@ -7,7 +7,7 @@ const useUnsaved = (message = "Do you want to leave") => {
     window.onbeforeunload = isDirty && (() => message);
 
     return () => (window.onbeforeunload = null);
-  }, []);
+  }, [isDirty, message]);
 
   const prompt = <Prompt when={isDirty} message={message} />;
   return [prompt, () => setIsDirty(true), () => setIsDirty(false)];

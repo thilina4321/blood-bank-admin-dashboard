@@ -16,7 +16,7 @@ const ImageUpload = (props) => {
       };
       fileReader.readAsDataURL(imageFile);
     }
-  }, [imageFile]);
+  }, [imageFile, setModelUrl]);
 
   const inputHandler = () => {
     imageRef.current.click();

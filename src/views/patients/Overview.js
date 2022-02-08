@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
-import CardComponent from "../../components/Card";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { homeFaqActions } from "../../store/home/faq";
 
