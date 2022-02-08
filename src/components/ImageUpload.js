@@ -48,19 +48,14 @@ const ImageUpload = (props) => {
         )}
       </div>
       <button
-        style={{
-          padding: "10px",
-          color: "white",
-          backgroundColor: "black",
-          borderRadius: "10px",
-        }}
+        className="image-button"
         onClick={inputHandler}
         type="button"
       >
         Pick Image
       </button>
     </div>
-  );
+  ); 
 };
 
 export default ImageUpload;
